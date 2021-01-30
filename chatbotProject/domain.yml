@@ -1,0 +1,209 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- places to eat
+- city
+- cousine
+- location of the class
+- greet
+- goodbye
+- classes
+- administration
+- info about campus
+- help
+- class
+- floor plan
+- office hours
+- professors
+- changes in schedule
+- documents
+- physical education
+- fees
+- public transport
+- office supplies
+- office supples
+- change_language
+- test_intent
+- out_of_scope
+- master
+- bachelor
+- what_can_i_do
+- cuisines
+- be_happy
+- good_to_know
+- beg_your_pardon
+- nlu_fallback
+- where_the_way
+- courses
+- campus_location
+entities:
+- city
+- class_number
+- food
+- professors
+slots:
+  class_number:
+    type: text
+    influence_conversation: true
+  professors:
+    type: text
+    influence_conversation: true
+  city:
+    type: text
+    influence_conversation: true
+  food:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - buttons:
+    - payload: administration
+      title: administration
+    - payload: location of the class
+      title: location of the class
+    - payload: info about campus
+      title: info about campus
+    - payload: help
+      title: /help
+    text: 'Hey! I am Erasmus bot. I can help you with all the problems concering our
+      faculty. If you need help just type /help and I will tell you how to talk to
+      me. Here are some things you can talk to me about: administration, location
+      of the class, info about campus.'
+  utter_goodbye:
+  - text: Bye
+  utter_help:
+  - buttons:
+    - payload: info about campus
+      title: info about campus
+    - payload: administration
+      title: administration
+    - payload: location of the class
+      title: location of the class
+    text: 'No worries 😀 I will be your guide. Here is the list of commands you can
+      type:'
+  utter_classes:
+  - buttons:
+    - payload: location of the class
+      title: location of the class
+    - payload: office hours
+      title: office hours
+    - payload: professors
+      title: professors
+    text: What would you like to know?
+  utter_administration:
+  - buttons:
+    - payload: changes in schedule
+      title: changes in schedule
+    - payload: documents
+      title: documents
+    - payload: physical education
+      title: physical education
+    text: Sure. No problem. Tell me what do you need to know.
+  utter_info_about_campus:
+  - buttons:
+    - payload: places to eat
+      title: places to eat
+    - payload: office supplies
+      title: office supplies
+    - payload: public transport
+      title: public transport
+    text: Fantastic. What would you like to know? I can recommend you places to eat
+      or tell you where you can buy cheap office supplies. Perhaps you need info about
+      public transport.
+  utter_location_of_class:
+  - text: Which class do you want to find?
+  utter_class:
+  - text: The class {class_number} is on the second floor
+  utter_floor_plan:
+  - text: Here is the link to the map. Enjoy. https://www.google.com/maps/place/FEUP+-+Faculdade+de+Engenharia+da+Universidade+do+Porto/@41.1780325,-8.5960027,19.5z/data=!4m5!3m4!1s0xd246446d48922a3:0x8b1e4a0bcdacc840!8m2!3d41.1783583!4d-8.5958454?hl=pl
+  utter_office_hours:
+  - buttons:
+    - payload: doktor Nowak
+      title: doktor Nowak
+    - payload: professor Kowalski
+      title: professor Kowalski
+    text: Which professor?
+  utter_professors:
+  - text: The {professor} has the office hours in class B211
+  utter_changes_in_schedule:
+  - text: "Here is the procedure. Step one, you will have to fill up the following\
+      \ document: document.com. Step two, go to the professor whose class you are\
+      \ planning to change and ask for her permission. Step three bring the document\
+      \ to the dean's office or use the USOS to send it. Instruction in the link:\
+      \ usos.pl"
+  utter_documents:
+  - buttons:
+    - payload: changes in schedule
+      title: change in schedule
+    - payload: fees
+      title: fees
+    text: What kind of documents do you require?
+  utter_physical_education:
+  - buttons:
+    - payload: bachelor
+      title: bachelor
+    - payload: master
+      title: master
+    text: Which cycle of studies are you currently enrolled in?
+  utter_fees:
+  - text: You can contact Miss Kowalska at kowalska@uni.pl She is responsible for
+      the fees. You have to pay them at the beginning of each semester.
+  utter_places_to_eat:
+  - text: Which city are you currently in? Type the name without Polish signs. For
+      instance Łódź should be typed as Lodz. Warszawa is Warsaw.
+  utter_office_supplies:
+  - text: Here is a list of addresses selling cheap office supplies around campus.
+  utter_public_transport:
+  - text: You can find all the necessary information here. http://www.mpk.lodz.pl/lang.action?lang=en
+  utter_change_language:
+  - text: Sorry. At the moment I can only process sentences in English.
+  - text: Sorry, I only speak English at the moment.
+  - image: https://memegenerator.net/img/instances/64355365/i-dont-always-speak-polish-but-when-i-do-kurwa.jpg
+    text: ''
+  utter_bachelor:
+  - text: In that case, you should take the class during the first year. Preferably
+      during summer semester. Here is the link with the registration and the list
+      of available classes example.com.
+  utter_master:
+  - text: So you should take the class during the second year. Preferably during summer
+      semester. Here is the link with the registration and the list of available classes
+      example.com.
+  utter_out_of_scope:
+  - text: It doesn't compute. It doesn't compute.
+  - text: I don't get it.
+  utter_test:
+  - image: https://www.testbytes.net/wp-content/uploads/2018/06/1.jpg
+    text: ''
+  utter_good_to_know:
+  - text: It is good to know that you know ;)
+  utter_beg_your_pardon:
+  - text: I beg your pardon!
+  - text: Excuse me? What have you said?
+  utter_be_happy:
+  - text: And the world will smile at you.
+  utter_where_to:
+  - buttons:
+    - payload: office supplies
+      title: office supplies
+    - payload: places to eat
+      title: places to eat
+    text: 'Where do you want to go? I can give you the following information:'
+  utter_courses:
+  - buttons:
+    - payload: programming course
+      title: programming course
+    - payload: finanse course
+      title: finanse course
+    - payload: artificial intelligence
+      title: artificial intelligence course
+    text: 'What kind of class? We are currently offering the following classes:'
+  utter_campus_location:
+  - text: 'The location of the campus is available here: https://goo.gl/maps/yyf3gWPZyPn75S86A'
+actions:
+- action_find_professor
+- action_hello_world
+- action_restaurants
+- action_restaurants_recommend
+- action_show_floor
+- utter_places_to_eat

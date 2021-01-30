@@ -1,0 +1,229 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hello
+    - Hi
+    - Hello.
+    - restart
+    - helo
+- intent: classes
+  examples: |
+    - classes
+    - Tell me about classes
+    - What are my classes?
+    - Info about classes
+- intent: courses
+  examples: |
+    - Can you tell me more about courses?
+    - Tell mi about my class
+    - Coders class
+    - Where is coders class?
+- intent: location of the class
+  examples: |
+    - location of the class
+    - Tell me where I can find class
+    - Where can i find a class?
+    - Where is class [B210](class_number)?
+    - class
+    - class [B111](class_number)
+    - class [A121](class_number)
+    - Where is mysecond year Finanse class?
+    - Finanse class where is?
+    - location of the class 2
+    - Tell mi about location of the clas
+    - location of the class 3e
+- intent: where_the_way
+  examples: |
+    - Can you show me the way?
+- intent: class
+  examples: |
+    - [B121](class_number)
+    - [A111](class_number)
+    - room [C331](class_number)
+    - class [A101](class_number)
+    - [B111](class_number)
+- intent: floor plan
+  examples: |
+    - floor plan
+    - what is on third floor?
+- intent: office hours
+  examples: |
+    - office hours
+    - Tell me about office hours
+    - info about office hours
+- intent: professors
+  examples: |
+    - [professor Kowalski](professors)
+    - [doktor Nowak](professors)
+    - [Nowak](professors)
+- intent: administration
+  examples: |
+    - administration
+    - Tell me about administration
+    - What about the administration?
+    - Info about administration
+    - What about administration?
+- intent: changes in schedule
+  examples: |
+    - changes in schedule
+    - Tell me about changes in schedule
+    - Where can I change my schedule
+    - info about changes in schedule
+- intent: documents
+  examples: |
+    - documents
+    - I need to find documents
+    - info about documents
+    - show me the documents
+    - Where can I find info about documents?
+- intent: physical education
+  examples: |
+    - physical education
+    - info about physical education
+- intent: fees
+  examples: |
+    - fees
+    - tell me about fees
+    - info about fees
+    - Where I can find information about fees?
+- intent: info about campus
+  examples: |
+    - info about campus
+    - campus
+    - Tell me about campus
+    - What about campus
+    - Campus information
+    - Tell mi about my campus
+    - info about campus - where is campus
+- intent: campus_location
+  examples: |
+    - Where is the campus?
+    - How do I get to the campus from Poland?
+- intent: places to eat
+  examples: |
+    - places to eat
+    - recommend me places to eat
+    - Where I can eat on campus?
+    - Places for dinner
+    - Where is the best places to eat?
+    - What can I eat?
+    - Where can I eat?
+    - Thanks. Can you tell me more about places to eat?
+    - How do I get to the places to eat?
+    - where can i eat
+    - where to eat
+    - where to eat dinner
+    - recommend me somewhere to eat
+    - recommend me something to eat on campus
+- intent: office supplies
+  examples: |
+    - office supplies
+    - Where I can buy cheap office supplies?
+    - Office supplies?
+    - Thanks. Can you tell me more about office suplies?
+- intent: public transport
+  examples: |
+    - public transport
+    - info about public transport
+    - Public transport
+- intent: help
+  examples: |
+    - help
+    - What can you do?
+    - What is your purpose?
+    - /help
+    - what else can you do
+    - Could You help me?
+    - Help
+- intent: what_can_i_do
+  examples: |
+    - What do you do?
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: change_language
+  examples: |
+    - czy mówisz po polsku?
+    - Jaki jest plan lekcji?
+    - Finanse
+    - administracja
+    - cześć
+    - jak to bye, ja chce rozmawiać
+    - jak się nazywasz?
+    - nie widzę tej listy. Gdzie ona jest?
+    - po polsku mówisz?
+    - mówisz po polsku
+    - ale ja chcę po polsku
+    - po polsku mówisz
+    - czy mówisz po polsku/
+    - dzień dobry.
+    - Polish
+- intent: nlu_fallback
+  examples: |
+    - po polsku chce
+- intent: out_of_scope
+  examples: |
+    - what is your name?
+    - fuck you
+- intent: test_intent
+  examples: |
+    - Test
+    - test
+- intent: bachelor
+  examples: |
+    - bachelor
+- intent: master
+  examples: |
+    - master
+- intent: city
+  examples: |
+    - [Łódź](city)
+    - [Lodz](city)
+    - [Warsaw](city)
+    - [Poznan](city)
+    - [Krakow](city)
+- intent: cousine
+  examples: |
+    - [Italian](food)
+    - [Fast food](food)
+    - [Sushi](food)
+    - [French](food)
+    - [italian](food)
+    - [fast food](food)
+    - [Italian](food) cuisine
+    - Japanese
+    - japanese cuisine
+- intent: be_happy
+  examples: |
+    - Don,t worry be happy :)
+- intent: good_to_know
+  examples: |
+    - yes, i know this :)
+- intent: beg_your_pardon
+  examples: |
+    - you need to practice with your IQ :)
+    - check your IQ

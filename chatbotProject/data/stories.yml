@@ -1,0 +1,144 @@
+version: "2.0"
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help
+  - action: utter_help
+- story: classes_path
+  steps:
+  - intent: classes
+  - action: utter_classes
+- story: administration_path
+  steps:
+  - intent: administration
+  - action: utter_administration
+- story: info_about_campus_path
+  steps:
+  - intent: info about campus
+  - action: utter_info_about_campus
+- story: location_of_class
+  steps:
+  - intent: location of the class
+  - action: utter_location_of_class
+  - intent: class
+  - action: action_show_floor
+- story: class
+  steps:
+  - intent: class
+  - action: action_show_floor
+- story: help
+  steps:
+  - intent: help
+  - action: action_hello_world
+- story: floor plan
+  steps:
+  - intent: floor plan
+  - action: utter_floor_plan
+- story: office hours
+  steps:
+  - intent: office hours
+  - action: utter_office_hours
+- story: professors
+  steps:
+  - intent: professors
+  - action: action_find_professor
+- story: changes in schedule
+  steps:
+  - intent: changes in schedule
+  - action: utter_changes_in_schedule
+- story: documents
+  steps:
+  - intent: documents
+  - action: utter_documents
+- story: physical education
+  steps:
+  - intent: physical education
+  - action: utter_physical_education
+- story: fees
+  steps:
+  - intent: fees
+  - action: utter_fees
+- story: places to eat
+  steps:
+  - intent: places to eat
+  - action: utter_places_to_eat
+  - intent: city
+  - action: action_restaurants
+  - intent: cuisines
+  - action: action_restaurants_recommend
+- story: office supplies
+  steps:
+  - intent: office supples
+  - action: utter_office_supplies
+- story: public transport
+  steps:
+  - intent: public transport
+  - action: utter_public_transport
+- story: change_language
+  steps:
+  - intent: change_language
+  - action: utter_change_language
+- story: master_physical_education
+  steps:
+  - intent: master
+  - action: utter_master
+- story: bachelor_physical_education
+  steps:
+  - intent: bachelor
+  - action: utter_bachelor
+- story: be_happy
+  steps:
+  - intent: be_happy
+  - action: utter_be_happy
+- story: beg_your_pardon
+  steps:
+  - intent: beg_your_pardon
+  - action: utter_beg_your_pardon
+- story: you know
+  steps:
+  - intent: good_to_know
+  - action: utter_good_to_know
+- story: test
+  steps:
+  - intent: test_intent
+  - action: utter_test
+- story: interactive_story_1
+  steps:
+  - intent: places to eat
+  - action: utter_places_to_eat
+  - intent: city
+    entities:
+    - city: Poznan
+  - slot_was_set:
+    - city: Poznan
+  - action: action_restaurants
+  - intent: cousine
+    entities:
+    - food: Italian
+  - slot_was_set:
+    - food: Italian
+  - action: action_restaurants_recommend
+  - intent: places to eat
+  - action: utter_places_to_eat
+  - intent: city
+    entities:
+    - city: Poznan
+  - slot_was_set:
+    - city: Poznan
+  - action: action_restaurants
+  - intent: cousine
+    entities:
+    - food: Japanese
+  - slot_was_set:
+    - food: Japanese
+  - action: action_restaurants_recommend
+- story: where to
+  steps:
+  - intent: where_the_way
+  - action: utter_where_to
+- story: courses
+  steps:
+  - intent: courses
+  - action: utter_courses
