@@ -99,3 +99,19 @@ stories:
   - action: utter_documents
   - intent: nlu_fallback
   - action: utter_good_to_know
+- story: Story from Conversation ID 5d84ac4ffc684982bb3dc3b735653666
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: info about campus
+  - action: utter_info_about_campus
+  - intent: places to eat
+  - action: utter_places_to_eat
+  - intent: city
+  - slot_was_set:
+    - city: Lodz
+  - action: action_restaurants
+  - intent: cousine
+  - slot_was_set:
+    - food: Italian
+  - action: action_restaurants_recommend
