@@ -215,8 +215,8 @@ nlu:
     - [italian](food)
     - [fast food](food)
     - [Italian](food) cuisine
-    - Japanese
-    - japanese cuisine
+    - [Japanese](food)
+    - [japanese](food) cuisine
 - intent: be_happy
   examples: |
     - Don,t worry be happy :)

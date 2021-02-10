@@ -1,0 +1,162 @@
+[
+  {
+    "text": "Can you tell me more about courses?",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "office hours",
+      "confidence": 0.22936265170574188
+    }
+  },
+  {
+    "text": "Tell mi about my class",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.5395016074180603
+    }
+  },
+  {
+    "text": "Where is coders class?",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.5911299586296082
+    }
+  },
+  {
+    "text": "B121",
+    "intent": "class",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.48486125469207764
+    }
+  },
+  {
+    "text": "room C331",
+    "intent": "class",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.42350995540618896
+    }
+  },
+  {
+    "text": "class A101",
+    "intent": "class",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.6212834119796753
+    }
+  },
+  {
+    "text": "B111",
+    "intent": "class",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.44183626770973206
+    }
+  },
+  {
+    "text": "Where can I find info about documents?",
+    "intent": "documents",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.26844868063926697
+    }
+  },
+  {
+    "text": "Where I can find information about fees?",
+    "intent": "fees",
+    "intent_prediction": {
+      "name": "office supplies",
+      "confidence": 0.29779762029647827
+    }
+  },
+  {
+    "text": "Where is the campus?",
+    "intent": "campus_location",
+    "intent_prediction": {
+      "name": "info about campus",
+      "confidence": 0.486527681350708
+    }
+  },
+  {
+    "text": "What do you do?",
+    "intent": "what_can_i_do",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.2705892026424408
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.36745524406433105
+    }
+  },
+  {
+    "text": "po polsku chce",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "change_language",
+      "confidence": 0.1965613216161728
+    }
+  },
+  {
+    "text": "what is your name?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "office supplies",
+      "confidence": 0.17085041105747223
+    }
+  },
+  {
+    "text": "fuck you",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "city",
+      "confidence": 0.16583216190338135
+    }
+  },
+  {
+    "text": "Test",
+    "intent": "test_intent",
+    "intent_prediction": {
+      "name": "changes in schedule",
+      "confidence": 0.21414127945899963
+    }
+  },
+  {
+    "text": "test",
+    "intent": "test_intent",
+    "intent_prediction": {
+      "name": "changes in schedule",
+      "confidence": 0.22156228125095367
+    }
+  },
+  {
+    "text": "master",
+    "intent": "master",
+    "intent_prediction": {
+      "name": "city",
+      "confidence": 0.1704634428024292
+    }
+  },
+  {
+    "text": "Don,t worry be happy :)",
+    "intent": "be_happy",
+    "intent_prediction": {
+      "name": "location of the class",
+      "confidence": 0.17886412143707275
+    }
+  },
+  {
+    "text": "check your IQ",
+    "intent": "beg_your_pardon",
+    "intent_prediction": {
+      "name": "floor plan",
+      "confidence": 0.1624584048986435
+    }
+  }
+]
