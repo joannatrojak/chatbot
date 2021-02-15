@@ -18,7 +18,6 @@ nlu:
     - Hello
     - Hi
     - Hello.
-    - restart
     - helo
 - intent: classes
   examples: |
@@ -46,6 +45,7 @@ nlu:
     - location of the class 2
     - Tell mi about location of the clas
     - location of the class 3e
+    - Location of the class
 - intent: where_the_way
   examples: |
     - Can you show me the way?
@@ -56,6 +56,8 @@ nlu:
     - room [C331](class_number)
     - class [A101](class_number)
     - [B111](class_number)
+    - [C333](class_number)
+    - [B123](class_number)
 - intent: floor plan
   examples: |
     - floor plan
@@ -70,6 +72,7 @@ nlu:
     - [professor Kowalski](professors)
     - [doktor Nowak](professors)
     - [Nowak](professors)
+    - [Doktor Nowak](professors)
 - intent: administration
   examples: |
     - administration
@@ -94,6 +97,7 @@ nlu:
   examples: |
     - physical education
     - info about physical education
+    - Physical education
 - intent: fees
   examples: |
     - fees
@@ -129,12 +133,14 @@ nlu:
     - where to eat dinner
     - recommend me somewhere to eat
     - recommend me something to eat on campus
+    - Places to eat
 - intent: office supplies
   examples: |
     - office supplies
     - Where I can buy cheap office supplies?
     - Office supplies?
     - Thanks. Can you tell me more about office suplies?
+    - Office supplies
 - intent: public transport
   examples: |
     - public transport
@@ -149,6 +155,7 @@ nlu:
     - what else can you do
     - Could You help me?
     - Help
+    - /restart
 - intent: what_can_i_do
   examples: |
     - What do you do?
@@ -215,8 +222,9 @@ nlu:
     - [italian](food)
     - [fast food](food)
     - [Italian](food) cuisine
-    - [Japanese](food)
+    - [Japanese](food) cuisine
     - [japanese](food) cuisine
+    - [Chinese](food)
 - intent: be_happy
   examples: |
     - Don,t worry be happy :)
