@@ -19,6 +19,7 @@ nlu:
     - Hi
     - Hello.
     - helo
+    - sup my chatbot
 - intent: classes
   examples: |
     - classes
@@ -40,11 +41,8 @@ nlu:
     - class
     - class [B111](class_number)
     - class [A121](class_number)
-    - Where is mysecond year Finanse class?
-    - Finanse class where is?
     - location of the class 2
-    - Tell mi about location of the clas
-    - location of the class 3e
+    - Tell mi about location of the class
     - Location of the class
 - intent: where_the_way
   examples: |
@@ -203,9 +201,17 @@ nlu:
 - intent: bachelor
   examples: |
     - bachelor
+    - bachelor physical education
+    - I am bachelor student
+    - first cycle studies
+    - first cycle physical education
 - intent: master
   examples: |
     - master
+    - master physical education
+    - I am master student
+    - second cycle studies
+    - second cycle physical education
 - intent: city
   examples: |
     - [Łódź](city)
@@ -213,6 +219,7 @@ nlu:
     - [Warsaw](city)
     - [Poznan](city)
     - [Krakow](city)
+    - [Wroclaw](city)
 - intent: cousine
   examples: |
     - [Italian](food)

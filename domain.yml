@@ -66,10 +66,9 @@ responses:
       title: info about campus
     - payload: help
       title: /help
-    text: 'Hey! I am Erasmus bot. I can help you with all the problems concering our
+    text: Hey! I am Erasmus bot. I can help you with all the problems concering our
       faculty. If you need help just type /help and I will tell you how to talk to
-      me. Here are some things you can talk to me about: administration, location
-      of the class, info about campus.'
+      me.
   utter_goodbye:
   - text: Bye
   utter_help:
