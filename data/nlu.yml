@@ -20,6 +20,7 @@ nlu:
     - Hello.
     - restart
     - helo
+    - hi bot
 - intent: classes
   examples: |
     - classes
@@ -129,6 +130,7 @@ nlu:
     - where to eat dinner
     - recommend me somewhere to eat
     - recommend me something to eat on campus
+    - places to ea
 - intent: office supplies
   examples: |
     - office supplies
