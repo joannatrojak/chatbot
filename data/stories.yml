@@ -142,3 +142,10 @@ stories:
   steps:
   - intent: courses
   - action: utter_courses
+- story: sos 
+  steps: 
+  - intent: sos
+  - action: utter_problem
+  - intent: problem_to_solve
+  - action: action_mood
+

@@ -47,6 +47,10 @@ nlu:
 - intent: where_the_way
   examples: |
     - Can you show me the way?
+    - where to go?
+    - show me the way
+    - Where is the campus?
+    - How do I get to the campus from Poland?
 - intent: class
   examples: |
     - [B121](class_number)
@@ -111,10 +115,6 @@ nlu:
     - Campus information
     - Tell mi about my campus
     - info about campus - where is campus
-- intent: campus_location
-  examples: |
-    - Where is the campus?
-    - How do I get to the campus from Poland?
 - intent: places to eat
   examples: |
     - places to eat
@@ -139,11 +139,19 @@ nlu:
     - Office supplies?
     - Thanks. Can you tell me more about office suplies?
     - Office supplies
+    - i need office supplies
+    - i need a new pen
+    - I need to print something.
 - intent: public transport
   examples: |
     - public transport
     - info about public transport
     - Public transport
+    - where is the nearest bus station?
+    - bus station
+    - tram
+    - train
+    - how can I go to the city center?
 - intent: help
   examples: |
     - help
@@ -154,9 +162,10 @@ nlu:
     - Could You help me?
     - Help
     - /restart
-- intent: what_can_i_do
-  examples: |
     - What do you do?
+    - what is your purpose?
+    - what is your goal?
+    - what can you do?
 - intent: goodbye
   examples: |
     - good afternoon
@@ -194,10 +203,6 @@ nlu:
   examples: |
     - what is your name?
     - fuck you
-- intent: test_intent
-  examples: |
-    - Test
-    - test
 - intent: bachelor
   examples: |
     - bachelor
@@ -232,13 +237,24 @@ nlu:
     - [Japanese](food) cuisine
     - [japanese](food) cuisine
     - [Chinese](food)
-- intent: be_happy
-  examples: |
-    - Don,t worry be happy :)
-- intent: good_to_know
-  examples: |
-    - yes, i know this :)
 - intent: beg_your_pardon
   examples: |
     - you need to practice with your IQ :)
     - check your IQ
+- intent: sos
+  examples: |
+    - sos
+    - SOS
+    - I need to talk to someone
+    - where i can find someone to talk
+    - I am in so much trouble
+- intent: problem_to_solve
+  examples: |
+    - I have problem with homework
+    - I need help with language
+    - My teacher doesn't like me
+    - I am so lost
+    - I have nowhere else to go
+    - I have problem with my homework. I need help.
+    - it is nothing. i am really happy today I just felt the need to tell someone
+    - life sucks man

@@ -17,12 +17,12 @@ import json
 import os
 import sqlite3
 import random
+from ibm_watson import ToneAnalyzerV3
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
-professors = {
-    "professor Kowalski": "B111",
-    "doktor Nowak": "A321"
-}
 db = sqlite3.connect('actions\db.db')
+authenticator = IAMAuthenticator('inAldw9WbNoE-loCFZgksuWt_tShZUjL-jc7NW94yarl')
+
 
 class ActionShowFloor(Action):
 
@@ -43,6 +43,8 @@ class ActionShowFloor(Action):
             dispatcher.utter_message(text="The class "+class_number_slot +" is on the first floor.")
         elif class_number.group(0) == '3': 
             dispatcher.utter_message(text="The class "+class_number_slot +" is on the second floor.")
+        
+        dispatcher.utter_message(text="Could not find class. Type class in the following format: B111.")
 
         
 
@@ -127,6 +129,38 @@ class ActionRestaurantsRecommend(Action):
             url_site = json_restaurants['restaurants'][random_number]['restaurant']['url']
             address = json_restaurants['restaurants'][random_number]['restaurant']['location']['address']
             dispatcher.utter_message(text="Here is a recommended restaurant for you. It is called "+name+". Here is some information about it: "+url_site+". The address is: "+address+".")   
+class ActionMood(Action):
+    def name(self) -> Text: 
+        return "action_mood"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+
+        tone_analyzer = ToneAnalyzerV3(
+        version='2017-09-21',
+        authenticator=authenticator
+        )
+        tone_analyzer.set_service_url('https://api.eu-gb.tone-analyzer.watson.cloud.ibm.com/instances/816903a9-d846-4b7e-b3e8-59a49c104e0c')
+        intentToAnalyze = tracker.latest_message['text']
+        print(intentToAnalyze)
+
+        tone_analysis = tone_analyzer.tone(
+        {'text': intentToAnalyze},
+        content_type='application/json'
+        ).get_result()
+        print(json.dumps(tone_analysis, indent=2))
+        mood = [tone['tone_id'] for tone in tone_analysis['document_tone']['tones']]
+        print(mood)
+        print(len(mood))
+        if len(mood) == 1: 
+            dispatcher.utter_message(text="You're current mood is "+ mood[0])
+        if len(mood) == 2: 
+            dispatcher.utter_message(text="You're current mood is "+ mood[0]+ " and "+mood[1])
         
+
+
+
+
         
 

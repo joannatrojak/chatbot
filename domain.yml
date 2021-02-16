@@ -2,6 +2,8 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- problem
+- sos
 - places to eat
 - city
 - cousine
@@ -37,6 +39,7 @@ intents:
 - where_the_way
 - courses
 - campus_location
+- problem_to_solve
 entities:
 - city
 - class_number
@@ -111,7 +114,8 @@ responses:
       or tell you where you can buy cheap office supplies. Perhaps you need info about
       public transport.
   utter_location_of_class:
-  - text: Which class do you want to find?
+  - text: 'Which class do you want to find? Provide the number in the following way:
+      B111.'
   utter_class:
   - text: The class {class_number} is on the second floor
   utter_floor_plan:
@@ -199,10 +203,12 @@ responses:
     text: 'What kind of class? We are currently offering the following classes:'
   utter_campus_location:
   - text: 'The location of the campus is available here: https://goo.gl/maps/yyf3gWPZyPn75S86A'
+  utter_problem:
+  - text: Tell me about it. What seems to be a problem?
 actions:
 - action_find_professor
 - action_hello_world
+- action_mood
 - action_restaurants
 - action_restaurants_recommend
 - action_show_floor
-- utter_places_to_eat
